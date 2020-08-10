@@ -149,6 +149,10 @@ let
         type = with types; nullOr str;
         default = null;
       };
+      "if" = mkOption {
+        type = with types; nullOr str;
+        default = null;
+      };
       concurrency = mkOption {
         type = with types; nullOr ints.positive;
         default = null;
@@ -171,6 +175,10 @@ let
         default = null;
       };
       branches = mkOption {
+        type = with types; nullOr str;
+        default = null;
+      };
+      "if" = mkOption {
         type = with types; nullOr str;
         default = null;
       };
@@ -279,7 +287,11 @@ let
         default = null;
       };
       branches = mkOption {
-        type = nullOr str;
+        type = with types; nullOr str;
+        default = null;
+      };
+      "if" = mkOption {
+        type = with types; nullOr str;
         default = null;
       };
       fields = mkOption {
